@@ -1,7 +1,6 @@
-#ifndef Rcpp11_h
-#define Rcpp11_h
+#ifndef Rcpp14_h
+#define Rcpp14_h
 
-// #define RCPP11_EXPERIMENTAL_PRESERVE
 #define RCPP11_EXPERIMENTAL_PARALLEL
 
 // minimum size for parallel features to kick in
@@ -236,6 +235,6 @@ namespace Rcpp{
 
 #include <Rcpp/vector/dimnames.h>
 
-namespace Rcpp11 = Rcpp ;
+namespace Rcpp14 = Rcpp ;
 
 #endif

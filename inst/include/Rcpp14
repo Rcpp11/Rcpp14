@@ -1,0 +1,10 @@
+#ifndef RCPP14_includes
+#define RCPP14_includes
+
+#include <Rcpp.h>
+
+#ifndef RCPP14_DISABLE_AUTOMATIC_USING_NAMESPACE
+using namespace Rcpp14 ;
+#endif
+
+#endif
