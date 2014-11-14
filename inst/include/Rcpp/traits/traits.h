@@ -1,0 +1,42 @@
+#ifndef Rcpp__traits__traits__h
+#define Rcpp__traits__traits__h
+
+#include <Rcpp/traits/is_materialized.h> 
+#include <Rcpp/traits/number_to_type.h>
+#include <Rcpp/traits/static_max_int.h>
+#include <Rcpp/traits/is_wide_string.h>
+#include <Rcpp/traits/char_type.h>
+#include <Rcpp/traits/named_object.h>
+#include <Rcpp/traits/has_na.h>
+#include <Rcpp/traits/storage_type.h>
+#include <Rcpp/traits/r_sexptype_traits.h>
+#include <Rcpp/traits/storage_type.h>
+#include <Rcpp/traits/r_type_traits.h>
+#include <Rcpp/traits/wrap_type_traits.h>
+#include <Rcpp/traits/is_na.h>
+#include <Rcpp/traits/is_finite.h>
+#include <Rcpp/traits/is_infinite.h>
+#include <Rcpp/traits/is_nan.h>
+#include <Rcpp/traits/or_.h>
+#include <Rcpp/traits/get_na.h>
+#include <Rcpp/traits/is_trivial.h>
+#include <Rcpp/traits/any_named.h>
+#include <Rcpp/traits/is_primitive.h>
+#include <Rcpp/traits/sfinae.h>
+#include <Rcpp/traits/sequence.h>
+#include <Rcpp/traits/index_sequence_that.h>
+#include <Rcpp/traits/and_.h>
+#include <Rcpp/traits/is_compatible.h> 
+#include <Rcpp/traits/all_compatible.h>
+#include <Rcpp/traits/all_convertible.h>
+#include <Rcpp/traits/all_named.h>
+#include <Rcpp/traits/is_matrix_expression.h>
+#include <Rcpp/traits/is_vector_expression.h>
+#include <Rcpp/traits/is_lazy_vector.h>
+#include <Rcpp/traits/get_compatible_r_vector_type.h>
+#include <Rcpp/traits/mapply_scalar_type.h>
+#include <Rcpp/traits/is_mapply_compatible.h>
+#include <Rcpp/traits/same_mapply_scalar_type.h>
+#include <Rcpp/traits/vector_of.h>
+
+#endif
