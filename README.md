@@ -1,7 +1,7 @@
 Rcpp14
 =======
 
-[![Build Status](https://travis-ci.org/Rcpp14/Rcpp14.png)](https://travis-ci.org/Rcpp14/Rcpp14)
+[![Build Status](https://travis-ci.org/Rcpp11/Rcpp14.png)](https://travis-ci.org/Rcpp11/Rcpp14)
 
 `Rcpp14` is a complete redesign of `Rcpp`, targetting C++11.
 
