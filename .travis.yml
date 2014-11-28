@@ -15,6 +15,7 @@ script:
   - R CMD INSTALL .
   - cd ..
   - git clone https://github.com/Rcpp11/Rcpp-test.git
+  - touch /tmp/DESCRIPTION
   - sed "s/Rcpp11/Rcpp14/" Rcpp-test/DESCRIPTION > /tmp/DESCRIPTION
   - cat "SystemRequirements: C++14" >> /tmp/DESCRIPTION
   - mv /tmp/DESCRIPTION Rcpp-test/
