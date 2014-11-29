@@ -17,7 +17,7 @@ script:
   - git clone https://github.com/Rcpp11/Rcpp-test.git
   - mkdir tmp
   - sed "s/Rcpp11/Rcpp14/" Rcpp-test/DESCRIPTION > tmp/DESCRIPTION
-  - echo "SystemRequirements: C++14" >> tmp/DESCRIPTION
+  - cat "SystemRequirements: C++14" >> tmp/DESCRIPTION
   - mv -frv tmp/DESCRIPTION Rcpp-test/
   - git clone https://github.com/Rcpp11/attributes.git
   - R CMD INSTALL attributes
