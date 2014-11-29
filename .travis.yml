@@ -15,9 +15,10 @@ script:
   - R CMD INSTALL .
   - cd ..
   - git clone https://github.com/Rcpp11/Rcpp-test.git
-  - sed "s/Rcpp11/Rcpp14/" Rcpp-test/DESCRIPTION > /tmp/DESCRIPTION
-  - echo "SystemRequirements: C++14" >> /tmp/DESCRIPTION
-  - mv /tmp/DESCRIPTION Rcpp-test/
+  - mkdir tmp
+  - sed "s/Rcpp11/Rcpp14/" Rcpp-test/DESCRIPTION > tmp/DESCRIPTION
+  - echo "SystemRequirements: C++14" >> tmp/DESCRIPTION
+  - mv -frv tmp/DESCRIPTION Rcpp-test/
   - git clone https://github.com/Rcpp11/attributes.git
   - R CMD INSTALL attributes
   - Rscript -e "library('attributes'); compileAttributes('Rcpp-test')"
