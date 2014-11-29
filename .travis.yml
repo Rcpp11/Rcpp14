@@ -16,6 +16,7 @@ script:
   - cd ..
   - git clone https://github.com/Rcpp11/Rcpp-test.git
   - mkdir tmp
+  - touch tmp/DESCRIPTION
   - sed "s/Rcpp11/Rcpp14/" Rcpp-test/DESCRIPTION > tmp/DESCRIPTION
   - cat "SystemRequirements: C++14" >> tmp/DESCRIPTION
   - mv -frv tmp/DESCRIPTION Rcpp-test/
