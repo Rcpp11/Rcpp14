@@ -1,13 +1,13 @@
-#ifndef RCPP11_TOOLS_generate_PARALLEL_H
-#define RCPP11_TOOLS_generate_PARALLEL_H
+#ifndef RCPP14_TOOLS_generate_PARALLEL_H
+#define RCPP14_TOOLS_generate_PARALLEL_H
 
 namespace Rcpp{
     namespace parallel{
         
         template <typename OutputIterator, typename Size, typename Generator>
         inline void generate_n( OutputIterator begin, Size n, Generator gen ){ 
-            int nthreads = RCPP11_PARALLEL_NTHREADS ;
-            if( n > RCPP11_PARALLEL_MINIMUM_SIZE ){
+            int nthreads = RCPP14_PARALLEL_NTHREADS ;
+            if( n > RCPP14_PARALLEL_MINIMUM_SIZE ){
                 std::vector<std::thread> workers(nthreads-1) ;
                 Size chunk_size = n / nthreads ;
                 Size pos = 0;

@@ -1,5 +1,5 @@
-#ifndef RCPP11_TRAITS_index_sequence_that_h
-#define RCPP11_TRAITS_index_sequence_that_h
+#ifndef RCPP14_TRAITS_index_sequence_that_h
+#define RCPP14_TRAITS_index_sequence_that_h
 
 namespace Rcpp{
     namespace traits{

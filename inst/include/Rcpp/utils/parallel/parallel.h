@@ -1,5 +1,5 @@
-#ifndef RCPP11_TOOLS_PARALLEL_PARALLEL_H
-#define RCPP11_TOOLS_PARALLEL_PARALLEL_H
+#ifndef RCPP14_TOOLS_PARALLEL_PARALLEL_H
+#define RCPP14_TOOLS_PARALLEL_PARALLEL_H
 
 #include <Rcpp/utils/parallel/copy.h>
 #include <Rcpp/utils/parallel/transform.h>

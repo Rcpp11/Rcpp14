@@ -1,5 +1,5 @@
-#ifndef RCPP11_TOOLS_COPY_PARALLEL_H
-#define RCPP11_TOOLS_COPY_PARALLEL_H
+#ifndef RCPP14_TOOLS_COPY_PARALLEL_H
+#define RCPP14_TOOLS_COPY_PARALLEL_H
 
 namespace Rcpp{
     namespace parallel{
@@ -12,8 +12,8 @@ namespace Rcpp{
         template <typename InputIterator, typename OutputIterator>
         inline void copy_impl( InputIterator begin, InputIterator end, OutputIterator target, std::random_access_iterator_tag ){
             R_xlen_t n = std::distance(begin, end) ;
-            int nthreads = RCPP11_PARALLEL_NTHREADS ;
-            if( n > RCPP11_PARALLEL_MINIMUM_SIZE ){
+            int nthreads = RCPP14_PARALLEL_NTHREADS ;
+            if( n > RCPP14_PARALLEL_MINIMUM_SIZE ){
                 std::vector<std::thread> workers(nthreads-1) ;
                 R_xlen_t chunk_size = n / nthreads ;
                 R_xlen_t start=0; 

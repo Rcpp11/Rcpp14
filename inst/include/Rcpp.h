@@ -1,15 +1,13 @@
 #ifndef Rcpp14_h
 #define Rcpp14_h
 
-#define RCPP11_EXPERIMENTAL_PARALLEL
-
 // minimum size for parallel features to kick in
-#ifndef RCPP11_PARALLEL_MINIMUM_SIZE
-    #define RCPP11_PARALLEL_MINIMUM_SIZE 10000
+#ifndef RCPP14_PARALLEL_MINIMUM_SIZE
+    #define RCPP14_PARALLEL_MINIMUM_SIZE 10000
 #endif
 
-#ifndef RCPP11_PARALLEL_NTHREADS
-    #define RCPP11_PARALLEL_NTHREADS std::thread::hardware_concurrency()
+#ifndef RCPP14_PARALLEL_NTHREADS
+    #define RCPP14_PARALLEL_NTHREADS std::thread::hardware_concurrency()
 #endif
 
 

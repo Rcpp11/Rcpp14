@@ -1,5 +1,5 @@
-#ifndef RCPP11_DESCRIBE_H
-#define RCPP11_DESCRIBE_H
+#ifndef RCPP14_DESCRIBE_H
+#define RCPP14_DESCRIBE_H
 
 namespace Rcpp{
     

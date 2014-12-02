@@ -1,14 +1,14 @@
-#ifndef RCPP11_TOOLS_TRANSFORM_PARALLEL_H
-#define RCPP11_TOOLS_TRANSFORM_PARALLEL_H
+#ifndef RCPP14_TOOLS_TRANSFORM_PARALLEL_H
+#define RCPP14_TOOLS_TRANSFORM_PARALLEL_H
 
 namespace Rcpp{
     namespace parallel{
     
         template <typename InputIterator, typename OutputIterator, typename Function>
         void transform_impl( InputIterator begin, InputIterator end, OutputIterator target, Function fun, std::random_access_iterator_tag ){ 
-            int nthreads = RCPP11_PARALLEL_NTHREADS ;
+            int nthreads = RCPP14_PARALLEL_NTHREADS ;
             R_xlen_t n = std::distance(begin, end) ;
-            if( n > RCPP11_PARALLEL_MINIMUM_SIZE ){   
+            if( n > RCPP14_PARALLEL_MINIMUM_SIZE ){   
                 std::vector<std::thread> workers(nthreads-1) ;
                 R_xlen_t chunk_size = n / nthreads ;
                 R_xlen_t start=0; 
