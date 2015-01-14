@@ -114,6 +114,7 @@ namespace Rcpp{
 
     template <int RTYPE, typename Storage = PreserveStorage> class Vector ;
     template <int RTYPE, typename Storage = PreserveStorage> class Matrix ;
+    template <int RTYPE, typename Storage = PreserveStorage> class SquareMatrix ;
 
     typedef Vector<STRSXP> CharacterVector ;
     typedef Vector<VECSXP> List ;
