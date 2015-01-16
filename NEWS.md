@@ -4,3 +4,7 @@
 
 * Added `operator+=`, `-=`, `*=` and `/=` where the rhs is a sugar expression. 
 
+* Added template class `Strict` to implement more rigid (no automatic coercion) 
+  arguments in attribute generated functions. 
+
+
