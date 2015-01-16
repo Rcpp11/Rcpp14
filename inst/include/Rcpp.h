@@ -232,6 +232,7 @@ namespace Rcpp{
 #include <Rcpp/Timer.h>
 
 #include <Rcpp/vector/dimnames.h>
+#include <Rcpp/Strict.h>
 
 namespace Rcpp14 = Rcpp ;
 
