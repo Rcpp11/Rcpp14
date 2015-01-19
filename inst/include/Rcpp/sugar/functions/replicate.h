@@ -83,7 +83,7 @@ namespace Rcpp{
     } // sugar
     
     template <typename CallType, typename... Args>
-    inline auto replicate( R_xlen_t n, CallType call, Args&&... args) -> sugar::Replicate< typename sugar::replicate_dispatch_function_type<CallType,Args...>::type > {
+    inline auto replicate( R_xlen_t n, CallType call, Args&&... args) {
         typedef typename sugar::replicate_dispatch_function_type<CallType,Args...>::type function_type ;
         return sugar::Replicate<function_type>( n, function_type(call,std::forward<Args>(args)...) ) ;    
     }

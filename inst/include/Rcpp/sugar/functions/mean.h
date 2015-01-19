@@ -122,7 +122,7 @@ namespace Rcpp{
     } // sugar
     
     template <typename eT, typename Expr>
-    inline auto mean( const SugarVectorExpression<eT,Expr>& t) -> decltype(sugar::Mean<eT,Expr>(t).get()) {
+    inline auto mean( const SugarVectorExpression<eT,Expr>& t) {
         return sugar::Mean<eT,Expr>(t).get() ;
     }
     

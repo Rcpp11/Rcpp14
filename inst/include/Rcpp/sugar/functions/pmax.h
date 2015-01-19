@@ -22,29 +22,29 @@ namespace Rcpp{
     
     
     template <typename eT, typename Expr1, typename Expr2>
-    auto pmax( const SugarVectorExpression<eT, Expr1>& x, const SugarVectorExpression<eT,Expr2>& y ) -> decltype(mapply( sugar::pmax_op<eT>(), x, y )) {
+    auto pmax( const SugarVectorExpression<eT, Expr1>& x, const SugarVectorExpression<eT,Expr2>& y ) {
         return mapply( sugar::pmax_op<eT>(), x, y ) ;  
     }
     template <typename eT, typename Expr1>
-    auto pmax( const SugarVectorExpression<eT, Expr1>& x, eT y ) -> decltype(mapply( sugar::pmax_op<eT>(), x, y )) {
+    auto pmax( const SugarVectorExpression<eT, Expr1>& x, eT y ) {
         return mapply( sugar::pmax_op<eT>(), x, y ) ;  
     }
     template <typename eT, typename Expr2>
-    auto pmax( eT x, const SugarVectorExpression<eT, Expr2>& y ) -> decltype(mapply( sugar::pmax_op<eT>(), x, y )) {
+    auto pmax( eT x, const SugarVectorExpression<eT, Expr2>& y ) {
         return mapply( sugar::pmax_op<eT>(), x, y ) ;  
     }
     
     
     template <typename eT, typename Expr1, typename Expr2>
-    auto pmin( const SugarVectorExpression<eT, Expr1>& x, const SugarVectorExpression<eT,Expr2>& y ) -> decltype(mapply( sugar::pmin_op<eT>(), x, y )) {
+    auto pmin( const SugarVectorExpression<eT, Expr1>& x, const SugarVectorExpression<eT,Expr2>& y ) {
         return mapply( sugar::pmin_op<eT>(), x, y ) ;  
     }
     template <typename eT, typename Expr1>
-    auto pmin( const SugarVectorExpression<eT, Expr1>& x, eT y ) -> decltype(mapply( sugar::pmin_op<eT>(), x, y )) {
+    auto pmin( const SugarVectorExpression<eT, Expr1>& x, eT y ) {
         return mapply( sugar::pmin_op<eT>(), x, y ) ;  
     }
     template <typename eT, typename Expr2>
-    auto pmin( eT x, const SugarVectorExpression<eT, Expr2>& y ) -> decltype(mapply( sugar::pmin_op<eT>(), x, y )) {
+    auto pmin( eT x, const SugarVectorExpression<eT, Expr2>& y ) {
         return mapply( sugar::pmin_op<eT>(), x, y ) ;  
     }
     

@@ -39,7 +39,7 @@ namespace Rcpp{
     }
 
     template <typename Container, typename Function>
-    inline auto transform( const Container& c, Function fun) -> decltype(transform(c.begin(), c.end(), fun)) {
+    inline auto transform( const Container& c, Function fun) {
         return transform( c.begin(), c.end(), fun) ;    
     }
     

@@ -37,7 +37,7 @@ namespace Rcpp{
     }
     
     template <typename Container>
-    inline auto import( const Container& c ) -> decltype(import(c.begin(), c.end())) {
+    inline auto import( const Container& c ) {
         return import( c.begin(), c.end() ) ;    
     }
     

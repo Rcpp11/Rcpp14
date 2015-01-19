@@ -14,7 +14,7 @@ namespace Rcpp{
     }
     
     template <typename eT, typename Expr>
-    inline auto na_omit( const SugarVectorExpression<eT,Expr>& t) -> decltype( filter( sugar::not_na_op<eT>(), t) ) {
+    inline auto na_omit( const SugarVectorExpression<eT,Expr>& t) {
         return filter( sugar::not_na_op<eT>(), t) ; 
     }
 

@@ -15,7 +15,7 @@ namespace Rcpp {
             using CRTP<T>::get_ref ;
     
             template <typename... Args>
-            inline auto operator()( Args&&... args) -> decltype( get_ref()(std::forward<Args>(args)...) ){
+            inline auto operator()( Args&&... args) {
                 return get_ref()(std::forward<Args>(args)...) ;
             }
             
@@ -30,7 +30,7 @@ namespace Rcpp {
             Capture( T fun_) : fun(fun_){}
             
             template <typename... Args>
-            inline auto operator()( Args&&... args) -> decltype( fun(std::forward<Args>(args)...) ){
+            inline auto operator()( Args&&... args) {
                 return fun(std::forward<Args>(args)...) ;
             }
         } ;

@@ -1,15 +1,15 @@
 #ifndef RCPP_SUGAR_MATH_H
 #define RCPP_SUGAR_MATH_H
 
-#define VECTORIZED_MATH_1(__NAME__,__SYMBOL__)                                                       \
-namespace Rcpp {                                                                                     \
-    template <typename Expr>                                                              \
-    auto __NAME__( const SugarVectorExpression<double,Expr>& x ) -> decltype(sapply(x, __SYMBOL__)) { \
-        return sapply( x, __SYMBOL__ ) ;                                                             \
-    }                                                                                                \
-    template <typename Expr>                                                              \
-    auto __NAME__( const SugarVectorExpression<int,Expr>& x ) -> decltype(sapply(x, __SYMBOL__)) { \
-        return sapply( x, __SYMBOL__ ) ;                                                             \
+#define VECTORIZED_MATH_1(__NAME__,__SYMBOL__)                     \
+namespace Rcpp {                                                   \
+    template <typename Expr>                                       \
+    auto __NAME__( const SugarVectorExpression<double,Expr>& x ) { \
+        return sapply( x, __SYMBOL__ ) ;                           \
+    }                                                              \
+    template <typename Expr>                                       \
+    auto __NAME__( const SugarVectorExpression<int,Expr>& x ) {    \
+        return sapply( x, __SYMBOL__ ) ;                           \
     } }
 
 namespace Rcpp{                     
@@ -51,9 +51,7 @@ VECTORIZED_MATH_1(trunc, ::Rf_ftrunc)
 #define VECTORIZED_MATH_2(__NAME__,__SYMBOL__)                                      \
 namespace Rcpp {                                                                    \
     template <typename T1, typename T2>                                             \
-    auto __NAME__( T1&& x, T2&& y )                                                 \
-        -> decltype(mapply(__SYMBOL__, std::forward<T1>(x), std::forward<T2>(y) ))  \
-    {                                                                               \
+    auto __NAME__( T1&& x, T2&& y ) {                                               \
         return mapply(__SYMBOL__, std::forward<T1>(x), std::forward<T2>(y) ) ;      \
     }                                                                               \
 }

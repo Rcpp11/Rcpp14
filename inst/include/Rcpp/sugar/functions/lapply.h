@@ -19,7 +19,7 @@ namespace Rcpp{
     } // sugar
     
     template <typename eT, typename Expr, typename Function >
-    inline auto lapply( const SugarVectorExpression<eT,Expr>& t, Function fun ) -> decltype( sapply(t, sugar::Wrapper<eT,Function>(fun) ) ) {
+    inline auto lapply( const SugarVectorExpression<eT,Expr>& t, Function fun ) {
         return sapply( t, sugar::Wrapper<eT,Function>(fun) );
     }
 

@@ -288,7 +288,7 @@ namespace Rcpp{
     }
 
     template <typename Function,typename... Args>
-    auto Map( Function fun, Args&&... args ) -> decltype(map(fun, std::forward<Args>(args)... )){
+    auto Map( Function fun, Args&&... args ) {
         return map(fun, std::forward<Args>(args)... ) ;
     }
 

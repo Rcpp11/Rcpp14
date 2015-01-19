@@ -17,9 +17,7 @@ namespace Rcpp{
     } // sugar
 
     template <typename eT, typename Expr>
-    inline auto clamp( eT lhs, const Rcpp::SugarVectorExpression<eT,Expr>& vec, eT rhs) -> 
-        decltype( sapply( vec, sugar::clamp_operator<eT>(lhs, rhs) ) ) 
-    {
+    inline auto clamp( eT lhs, const Rcpp::SugarVectorExpression<eT,Expr>& vec, eT rhs) {
         return sapply( vec, sugar::clamp_operator<eT>(lhs, rhs) ) ;
     }
 

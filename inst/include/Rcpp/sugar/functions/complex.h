@@ -186,9 +186,7 @@ namespace Rcpp{
         
 #define RCPP_SUGAR_COMPLEX(__NAME__)                                           \
     template <typename Expr>                                                   \
-    inline auto __NAME__( const SugarVectorExpression<Rcomplex,Expr>& t ) ->   \
-        decltype( sapply(t, Rcpp::internal::complex__##__NAME__ ) )            \
-    {                                                                          \
+    inline auto __NAME__( const SugarVectorExpression<Rcomplex,Expr>& t ) {    \
         return sapply(t, Rcpp::internal::complex__##__NAME__ ) ;               \
     }
 

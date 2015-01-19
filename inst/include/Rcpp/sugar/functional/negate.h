@@ -13,7 +13,7 @@ namespace Rcpp {
             Negate( Callable f_) : f(f_){}
 
             template <typename... Args>
-            inline auto operator()( Args&&... args ) -> decltype( ! f( std::forward<Args>(args)... ) ) {
+            inline auto operator()( Args&&... args ) {
                 return ! f( std::forward<Args>(args)... );
             }
 

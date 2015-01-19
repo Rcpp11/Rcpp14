@@ -75,7 +75,7 @@ namespace Rcpp{
     } // sugar
     
     template <typename eT, typename Expr>
-    inline auto sum( const SugarVectorExpression<eT, Expr>& t) -> decltype(sugar::Sum<eT, Expr>( t ).get()){
+    inline auto sum( const SugarVectorExpression<eT, Expr>& t) {
         return sugar::Sum<eT, Expr>( t ).get() ;
     }
     
