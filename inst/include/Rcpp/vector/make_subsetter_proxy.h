@@ -30,7 +30,7 @@ namespace Rcpp {
         auto n = index.size() ;
         if( n != source.size() ) 
             stop( "logical index size incompatible with source size (%d != %d)", n, source.size() ) ;
-        auto m = sum(index) ;
+        int m = sum(index) ;
         IntegerVector ind(m) ;
         auto it = sugar_begin(index) ;
         for( int i=0, k=0; i<n ; i++, ++it){
@@ -44,7 +44,7 @@ namespace Rcpp {
         auto n = index.size() ;
         if( n != source.size() ) 
             stop( "logical index size incompatible with source size (%d != %d)", n, source.size() ) ;
-        auto m = sum(index) ;
+        int m = sum(index) ;
         IntegerVector ind(m) ;
         auto it = sugar_begin(index) ;
         for( int i=0, k=0; i<n ; i++, ++it){
