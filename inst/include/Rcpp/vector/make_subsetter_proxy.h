@@ -30,7 +30,16 @@ namespace Rcpp {
         auto n = index.size() ;
         if( n != source.size() ) 
             stop( "logical index size incompatible with source size (%d != %d)", n, source.size() ) ;
-        int m = std::count( sugar_begin(index), sugar_end(index), TRUE ) ;
+        int m = 0 ;
+        const Expr& ref = index.get_ref() ;
+        for(R_xlen_t i=0; i<index.size(); i++){
+            Rboolean b = ref[i] ;
+            if( b == TRUE ){
+                m++ ;
+            } else if( b == NA ){
+                stop( "logical subsetting with NA is not supported" ) ;    
+            }
+        }
         IntegerVector ind(m) ;
         auto it = sugar_begin(index) ;
         for( int i=0, k=0; i<n ; i++, ++it){
