@@ -3,31 +3,13 @@
 
 namespace Rcpp {
     
-    template <typename Source, typename eT, typename Expr>
-    struct subset_proxy_type {
-        typedef SubsetProxy<Source,int,IntegerVector,true> type ;
-    } ;
-
-    template <typename Source, typename Expr>
-    struct subset_proxy_type<Source, int, Expr> {
-        typedef SubsetProxy<Source,int,Expr,false> type ;
-    } ;
-    
-    template <
-        typename Source, // y
-        typename Expr // x
-    >
-    inline typename subset_proxy_type<Source,int,Expr>::type 
-    make_subset_proxy( Source& source, const SugarVectorExpression<int, Expr>& index ){
+    template < typename Source, typename Expr >
+    inline auto make_subset_proxy( Source& source, const SugarVectorExpression<int, Expr>& index ){
         return SubsetProxy<Source,int,Expr,false>( source, index ) ;   
     }
     
-    template <
-        typename Source, // y
-        typename Expr // x
-    >
-    inline typename subset_proxy_type<Source,String,Expr>::type 
-    make_subset_proxy( Source& source, const SugarVectorExpression<String, Expr>& index ){
+    template < typename Source, typename Expr >
+    inline auto make_subset_proxy( Source& source, const SugarVectorExpression<String, Expr>& index ){
         auto n = index.size() ;
         IntegerVector ind(n) ;
         SEXP names = Rf_getAttrib( source, R_NamesSymbol ) ;
@@ -43,12 +25,8 @@ namespace Rcpp {
         return SubsetProxy<Source,int,IntegerVector,true>( source, ind ) ;   
     }
     
-    template <
-        typename Source, // y
-        typename Expr // x
-    >
-    inline typename subset_proxy_type<Source,Rboolean,Expr>::type 
-    make_subset_proxy( Source& source, const SugarVectorExpression<Rboolean, Expr>& index ){
+    template < typename Source, typename Expr >
+    inline auto make_subset_proxy( Source& source, const SugarVectorExpression<Rboolean, Expr>& index ){
         auto n = index.size() ;
         if( n != source.size() ) 
             stop( "logical index size incompatible with source size (%d != %d)", n, source.size() ) ;
@@ -61,12 +39,8 @@ namespace Rcpp {
         return SubsetProxy<Source,int,IntegerVector,true>( source, ind ) ;   
     }
     
-    template <
-        typename Source, // y
-        typename Expr // x
-    >
-    inline typename subset_proxy_type<Source,bool,Expr>::type 
-    make_subset_proxy( Source& source, const SugarVectorExpression<bool, Expr>& index ){
+    template < typename Source, typename Expr >
+    inline auto make_subset_proxy( Source& source, const SugarVectorExpression<bool, Expr>& index ){
         auto n = index.size() ;
         if( n != source.size() ) 
             stop( "logical index size incompatible with source size (%d != %d)", n, source.size() ) ;

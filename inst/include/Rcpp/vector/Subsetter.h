@@ -121,10 +121,6 @@ namespace Rcpp {
         }
     } ;
 
-    
-    template <typename Source, typename eT, typename Expr>
-    struct subset_proxy_type ;
-    
 }
 
 #endif
