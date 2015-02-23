@@ -9,3 +9,5 @@
 
 * Added `operator+=` etc ... for `Vector` x `primitive` case.   
 
+* Added `operator+=` etc ... for `Matrix` x `primitive` case. 
+
