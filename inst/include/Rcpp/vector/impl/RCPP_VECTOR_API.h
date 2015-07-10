@@ -102,7 +102,7 @@ private:
         #endif
     }
     
-    inline void reset(int n){
+    inline void reset(R_xlen_t n){
         set_data(Rf_allocVector(RTYPE, n), n) ;
     }
     
